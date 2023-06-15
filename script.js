@@ -1,23 +1,24 @@
-function inserir(num) {
-    document.querySelector(".display").innerHTML += num;
+
+function insert(num){
+   var numero = document.getElementById('display').innerHTML;
+   document.getElementById('display').innerHTML = numero + num
 }
 
-function clean() {
-   document.querySelector(".display").innerHTML = ""; 
+function clean(){
+   document.getElementById('display').innerHTML = ''
 }
 
 function back() {
-    let tela = document.querySelector(".display").innerHTML;
-    document.querySelector(".display").innerHTML = tela.substring(0, 
-    tela.length -1
-);
+    var resultado = document.getElementById('display').innerHTML
+    document.getElementById('display').innerHTML = resultado.substring(0, resultado.length - 1)
 }
 
-function somar(){
-    let tela = document.querySelector(".display").innerHTML;
-    if(tela){
-    document.querySelector(".display").innerHTML = eval(tela);
+function somar() {
+    let resultado = document.getElementById('display').innerHTML
+    if(resultado){
+        document.getElementById('display').innerHTML = eval(resultado)
     } else {
-        document.querySelector(".display").innerHTML = "nenhum comando..."
+        alert('Nenhum valor inserido.')
     }
+    
 }
