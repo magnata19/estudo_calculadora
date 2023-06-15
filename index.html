@@ -2,49 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculator</title>
+    <title>Somando números</title>
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <h2>Faça sua conta aqui!</h2>
-    <div class="calculator"> 
-            <div class="display"></div>
-
-            <table>
-                <tr>
-                    <td><button onclick="clean()">C</button></td>
-                    <td> <button onclick="inserir('%')">%</button></td>
-                    <td><button onclick="inserir('/')">/</button></td>
-                    <td><button onclick="back()"><</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('7')">7</button></td>
-                    <td><button onclick="inserir('8')">8</button></td>
-                    <td><button onclick="inserir('9')">9</button></td>
-                    <td><button onclick="inserir('*')">x</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('4')">4</button></td>
-                    <td><button onclick="inserir('5')">5</button></td>
-                    <td><button onclick="inserir('6')">6</button></td>
-                    <td><button onclick="inserir('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td> <button onclick="inserir('1')">1</button></td>
-                    <td><button onclick="inserir('2')">2</button></td>
-                    <td><button onclick="inserir('3')">3</button></td>
-                    <td><button onclick="inserir('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button onclick="inserir('0')">0</button></td>
-                    <td><button onclick="inserir(',')">,</button></td>
-                    <td class="equal" colspan="2"><button style="width: 103.5px; " onclick="somar()">=</button></td>
-                </tr>
-            </table>    
+    <div class="container">
+        <h3>Calculate</h3>
+        <div id="display"></div>
+       <table>
+        <tr>
+            <td class="number" onclick="clean()">C</td>
+            <td class="number" onclick="back()"><</td>
+            <td class="operator" onclick="insert('*')">x</td>
+            <td class="operator"onclick="insert('/')" >/</td>
+        </tr>
+        <tr>
+          <td class="number" onclick="insert('7')">7</td>  
+          <td class="number" onclick="insert('8')">8</td>  
+          <td class="number" onclick="insert('9')">9</td>  
+          <td class="operator" onclick="insert('+')">+</td>  
+        </tr>
+        <tr>
+            <td class="number" onclick="insert('4')">4</td>
+            <td class="number" onclick="insert('5')">5</td>
+            <td class="number" onclick="insert('6')">6</td>
+            <td class="operator" onclick="insert('-')">-</td>
+        </tr>
+        <tr>
+            <td class="number" onclick="insert('1')">1</td>
+            <td class="number" onclick="insert('2')">2</td>
+            <td class="number" onclick="insert('3')">3</td>
+            <td class="operator" rowspan="2" onclick="somar()">=</td>
+        </tr>
+        <tr>
+            <td class="number" colspan="2" onclick="insert('0')">0</td>
+            <td class="number" onclick="insert('.')">.</td>
+        </tr>
+       </table>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
